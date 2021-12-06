@@ -1,0 +1,8 @@
+<map id="circt::CleanupFuncOps" name="circt::CleanupFuncOps">
+<area shape="rect" id="node1" title="Erases FuncOp operations." alt="" coords="1135,45,1301,71"/>
+<area shape="rect" id="node2" href="$classcirct_1_1FuncOpPartialLoweringPattern.html" title="FuncOpPartialLoweringPatterns are patterns which intend to match on FuncOps and then perform their ow..." alt="" coords="879,37,1085,79"/>
+<area shape="rect" id="node3" href="$classcirct_1_1PartialLoweringPattern.html" title=" " alt="" coords="625,37,829,79"/>
+<area shape="rect" id="node4" href="$structmlir_1_1OpRewritePattern.html" title=" " alt="" coords="257,5,428,47"/>
+<area shape="rect" id="node5" href="$classcirct_1_1PartialLoweringPattern.html" title="Base class for partial lowering passes." alt="" coords="225,71,460,112"/>
+<area shape="rect" id="node6" href="$structmlir_1_1OpRewritePattern.html" title=" " alt="" coords="5,71,176,112"/>
+</map>

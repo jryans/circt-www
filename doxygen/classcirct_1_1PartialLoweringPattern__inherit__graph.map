@@ -1,0 +1,19 @@
+<map id="circt::PartialLoweringPattern&lt; OpType, RewritePatternType &gt;" name="circt::PartialLoweringPattern&lt; OpType, RewritePatternType &gt;">
+<area shape="rect" id="node1" title="Base class for partial lowering passes." alt="" coords="225,266,460,307"/>
+<area shape="rect" id="node3" href="$classcirct_1_1PartialLoweringPattern.html" title=" " alt="" coords="705,201,909,242"/>
+<area shape="rect" id="node14" href="$classcirct_1_1PartialLoweringPattern.html" title=" " alt="" coords="705,266,909,307"/>
+<area shape="rect" id="node16" href="$classcirct_1_1PartialLoweringPattern.html" title=" " alt="" coords="700,332,913,388"/>
+<area shape="rect" id="node2" href="$structmlir_1_1OpRewritePattern.html" title=" " alt="" coords="5,266,176,307"/>
+<area shape="rect" id="node4" href="$classcirct_1_1FuncOpPartialLoweringPattern.html" title="FuncOpPartialLoweringPatterns are patterns which intend to match on FuncOps and then perform their ow..." alt="" coords="971,201,1177,242"/>
+<area shape="rect" id="node5" href="$classcirct_1_1BuildBBRegs.html" title="Builds registers for each block argument in the program." alt="" coords="1263,5,1405,32"/>
+<area shape="rect" id="node6" href="$classcirct_1_1BuildControl.html" title="Builds a control schedule by traversing the CFG of the function and associating this with the previou..." alt="" coords="1265,56,1403,83"/>
+<area shape="rect" id="node7" href="$classcirct_1_1BuildOpGroups.html" title="Iterate through the operations of a source function and instantiate components or primitives based on..." alt="" coords="1257,107,1411,133"/>
+<area shape="rect" id="node8" href="$classcirct_1_1BuildReturnRegs.html" title="Builds registers for the return statement of the program and constant assignments to the component re..." alt="" coords="1251,157,1417,184"/>
+<area shape="rect" id="node9" href="$classcirct_1_1BuildWhileGroups.html" title="In BuildWhileGroups, a register is created for each iteration argumenet of the while op." alt="" coords="1247,208,1421,235"/>
+<area shape="rect" id="node10" href="$classcirct_1_1CleanupFuncOps.html" title="Erases FuncOp operations." alt="" coords="1251,259,1417,285"/>
+<area shape="rect" id="node11" href="$classcirct_1_1ConvertIndexTypes.html" title="Connverts all index&#45;typed operations and values to i32 values." alt="" coords="1243,309,1425,336"/>
+<area shape="rect" id="node12" href="$structcirct_1_1FuncOpConversion.html" title="Creates a new Calyx component for each FuncOp in the program." alt="" coords="1245,360,1423,387"/>
+<area shape="rect" id="node13" href="$classcirct_1_1LateSSAReplacement.html" title="LateSSAReplacement contains various functions for replacing SSA values that were not replaced during ..." alt="" coords="1235,411,1433,437"/>
+<area shape="rect" id="node15" href="$classcirct_1_1RewriteMemoryAccesses.html" title="This pass rewrites memory accesses that have a width mismatch." alt="" coords="963,273,1185,300"/>
+<area shape="rect" id="node17" href="$classcirct_1_1InlineCombGroups.html" title="This pass recursively inlines use&#45;def chains of combinational logic (from non&#45;stateful groups) into g..." alt="" coords="985,347,1163,373"/>
+</map>

@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['data_4890',['data',['../structcirct_1_1esi_1_1ESIPortValidReadyMapping.html#a049798166f30ffac542ed7a66cc4a1ea',1,'circt::esi::ESIPortValidReadyMapping']]],
+  ['datatapsclass_4891',['dataTapsClass',['../namespacecirct_1_1firrtl.html#a5b50476cf6b5afd28af5c932b6126f9c',1,'circt::firrtl']]],
+  ['datawidth_4892',['dataWidth',['../structcirct_1_1firrtl_1_1FirMemory.html#a1eb2296c21684a37438a0357f6a6e1d4',1,'circt::firrtl::FirMemory']]],
+  ['db_4893',['db',['../classPrimitiveDB.html#a8f2b6f8bf787f386f2516a7be0d252c2',1,'PrimitiveDB::db()'],['../classPlacementDB.html#a833712e200789c4ba32ad2b6a13bcfae',1,'PlacementDB::db()']]],
+  ['decimplmods_4894',['decImplMods',['../classcirct_1_1esi_1_1capnp_1_1TypeSchema.html#a123d058445f5df115dcfeb32d41c4355',1,'circt::esi::capnp::TypeSchema']]],
+  ['defuse_4895',['defUse',['../classcirct_1_1scheduling_1_1detail_1_1Dependence.html#a5f56424d07ee0aa1cc1b338a71402ddf',1,'circt::scheduling::detail::Dependence']]],
+  ['deletedkeyclass_4896',['deletedKeyClass',['../namespacecirct_1_1firrtl.html#a57c39d9b8c73aa136b4b0fc2a633ad4a',1,'circt::firrtl']]],
+  ['delta_4897',['delta',['../structcirct_1_1llhd_1_1sim_1_1Time.html#a03611991e40d33f7cb7d8fe6e10675a9',1,'circt::llhd::sim::Time']]],
+  ['dep_4898',['dep',['../classcirct_1_1scheduling_1_1detail_1_1DependenceIterator.html#af47b45477b958906f34838ee6cc12ef1',1,'circt::scheduling::detail::DependenceIterator']]],
+  ['dependencecomponents_4899',['dependenceComponents',['../structcirct_1_1analysis_1_1MemoryDependence.html#ad20ebe3658743600cf4dd3e5e9459816',1,'circt::analysis::MemoryDependence']]],
+  ['dependencetype_4900',['dependenceType',['../structcirct_1_1analysis_1_1MemoryDependence.html#a690e2795df22868ccc3ec0cb9b5cd92e',1,'circt::analysis::MemoryDependence']]],
+  ['depth_4901',['depth',['../structcirct_1_1firrtl_1_1FirMemory.html#aeb9f4745a80a6dab1d915e39c3d5817c',1,'circt::firrtl::FirMemory']]],
+  ['description_4902',['description',['../structllvm_1_1yaml_1_1MappingContextTraits_3_01DescribedSignal_00_01Context_01_4_1_1Field.html#a9e1a823dede78eedcbaaee76403fafa6',1,'llvm::yaml::MappingContextTraits&lt; DescribedSignal, Context &gt;::Field::description()'],['../structllvm_1_1yaml_1_1MappingContextTraits_3_01DescribedInstance_00_01Context_01_4_1_1Instance.html#a86d2b2c2634d62d5950e2e98c3dc42a3',1,'llvm::yaml::MappingContextTraits&lt; DescribedInstance, Context &gt;::Instance::description()']]],
+  ['designop_4903',['designOp',['../structcirct_1_1ExportVerilog_1_1SharedEmitterState.html#a6382ad5c6df0be4011da8c199366ea8c',1,'circt::ExportVerilog::SharedEmitterState']]],
+  ['dimensions_4904',['dimensions',['../structllvm_1_1yaml_1_1MappingContextTraits_3_01DescribedSignal_00_01Context_01_4_1_1Field.html#afb3066ae762316ece5ea862076826a86',1,'llvm::yaml::MappingContextTraits&lt; DescribedSignal, Context &gt;::Field::dimensions()'],['../structllvm_1_1yaml_1_1MappingContextTraits_3_01DescribedInstance_00_01Context_01_4_1_1Instance.html#adc5508008ca95d65924588b8fc68188e',1,'llvm::yaml::MappingContextTraits&lt; DescribedInstance, Context &gt;::Instance::dimensions()']]],
+  ['direction_4905',['direction',['../structcirct_1_1calyx_1_1PortInfo.html#a226b398ff03f0a259c714050c8bdddd6',1,'circt::calyx::PortInfo::direction()'],['../structcirct_1_1firrtl_1_1PortInfo.html#a5a582c6a37a475f0ac591e441a551f26',1,'circt::firrtl::PortInfo::direction()'],['../structcirct_1_1hw_1_1PortInfo.html#a65bed35370cd4007b8d3be10502dbdac',1,'circt::hw::PortInfo::direction()']]],
+  ['disallowlocalvariables_4906',['disallowLocalVariables',['../structcirct_1_1LoweringOptions.html#a15028105c7d67fad31d4cffc9fac1f02',1,'circt::LoweringOptions']]],
+  ['disallowpackedarrays_4907',['disallowPackedArrays',['../structcirct_1_1LoweringOptions.html#a5c24a55db49950f6cc733f05cfd61bcb',1,'circt::LoweringOptions']]],
+  ['distance_4908',['distance',['../classcirct_1_1scheduling_1_1CyclicProblem.html#aa57f6a2ec0905595920104d80444b2ef',1,'circt::scheduling::CyclicProblem']]],
+  ['done_4909',['done',['../structcirct_1_1CalyxMemoryPorts.html#a92c7344d462aca864a899c6a2c21d964',1,'circt::CalyxMemoryPorts']]],
+  ['donttouchannoclass_4910',['dontTouchAnnoClass',['../namespacecirct_1_1firrtl.html#aea3f31fd68647fc392b49757a068b286',1,'circt::firrtl']]],
+  ['dummy_5fop_4911',['dummy_op',['../classcirct_1_1support_1_1BackedgeBuilder_1_1Edge.html#a3601da89482b2094f2500c55a2d3f67a',1,'circt::support::BackedgeBuilder::Edge']]],
+  ['dutannoclass_4912',['dutAnnoClass',['../LowerToHW_8cpp.html#af03e0387909bf56d35a5af6c569a6bd6',1,'dutAnnoClass():&#160;LowerToHW.cpp'],['../CreateSiFiveMetadata_8cpp.html#af03e0387909bf56d35a5af6c569a6bd6',1,'dutAnnoClass():&#160;CreateSiFiveMetadata.cpp']]]
+];

@@ -1,0 +1,50 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>PyCDE - CIRCT</title><meta name=description content="Circuit IR Compilers and Tools"><meta name=generator content="Hugo 0.64.1"><link href=https://circt.llvm.org/index.xml rel=alternate type=application/rss+xml><link rel=canonical href=https://circt.llvm.org/docs/PyCDE/><link rel=stylesheet href=https://circt.llvm.org/css/theme.css><script src=https://use.fontawesome.com/releases/v5.0.6/js/all.js></script><link rel=stylesheet href=https://circt.llvm.org/css/chroma.min.css><script src=https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js></script><script src=https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js></script><script src=https://circt.llvm.org/js/bundle.js></script><script type=text/javascript src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type=text/x-mathjax-config>
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$', '$'] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+    }
+  });
+</script><style>:root{}</style></head><body><div class=container><header><h1><div><img src=https://circt.llvm.org//circt-logo.svg width=40px align=absmiddle>
+CIRCT</div></h1><p class=description>Circuit IR Compilers and Tools</p></header><div class=global-menu><nav><ul><li class=parent><a href>Community<i class="fas fa-angle-right"></i></a><ul class=sub-menu><li class=child><a href=https://llvm.discourse.group/c/Projects-that-want-to-become-official-LLVM-Projects/circt/40>Forums</a></li><li class=child><a href=https://discord.gg/xS7Z362>Chat</a></li></ul></li><li class=parent><a href=https://github.com/llvm/circt/tree/main/>Source<i class="fas fa-angle-right"></i></a><ul class=sub-menu><li class=child><a href=/doxygen/>Doxygen</a></li><li class=child><a href=https://github.com/llvm/circt/tree/main/>GitHub</a></li></ul></li></ul></nav></div><div class=content-container><main><h1>PyCDE</h1><p>PyCDE stands for Python circuit design entry. It is an experimental, opinionated, Python-based fronted for CIRCT&rsquo;s Python bindings. The goal is to make the definition of hardware modules using the bindings simple.</p><h1 id=installation>Installation</h1><h2 id=via-pip>via Pip&nbsp;<a class=headline-hash href=#via-pip>¶</a></h2><p>PyCDE is now being released on PyPI: <a href=https://pypi.org/project/pycde/>https://pypi.org/project/pycde/</a></p><h2 id=installing-and-building-with-wheels>Installing and Building with Wheels&nbsp;<a class=headline-hash href=#installing-and-building-with-wheels>¶</a></h2><p>The simplest way to get started using PyCDE is to install it with the <code>pip install</code> command:</p><pre><code>$ cd circt
+$ pip install frontends/PyCDE --use-feature=in-tree-build
+</code></pre><p>If you just want to build the wheel, use the <code>pip wheel</code> command:</p><pre><code>$ cd circt
+$ pip wheel frontends/PyCDE --use-feature=in-tree-build
+</code></pre><p>This will create a <code>pycde-&lt;version>-&lt;python version>-&lt;platform>.whl</code> file in the root of the repo.</p><h2 id=manual-compilation>Manual Compilation&nbsp;<a class=headline-hash href=#manual-compilation>¶</a></h2><p>If you are interested in developing PyCDE, or simply want to install it yourself with CMake, you can configure CMake similarly to the
+<a href=/PythonBindings/#manual-compilation>Python bindings</a>
+:</p><pre><code>$ cd circt
+$ mkdir build
+$ cd build
+$ cmake -G Ninja ../llvm/llvm \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DLLVM_ENABLE_PROJECTS=mlir \
+    -DLLVM_ENABLE_ASSERTIONS=ON \
+    -DLLVM_EXTERNAL_PROJECTS=circt \
+    -DLLVM_EXTERNAL_CIRCT_SOURCE_DIR=.. \
+    -DMLIR_ENABLE_BINDINGS_PYTHON=ON \
+    -DCIRCT_BINDINGS_PYTHON_ENABLED=ON \
+    -DCIRCT_ENABLE_FRONTENDS=PyCDE
+</code></pre><p>Afterwards, use <code>ninja check-pycde</code> to ensure that PyCDE is built and the tests pass.</p><p>If you want to use PyCDE after compiling it, you must add the core CIRCT bindings and PyCDE to your PYTHONPATH:</p><pre><code>export PYTHONPATH=&quot;$PWD/build/tools/circt/python_packages/circt_core:$PWD/build/tools/circt/python_packages/pycde&quot;
+</code></pre><p>If you are installing PyCDE through <code>ninja install</code>, the libraries and Python modules will be installed into the correct location automatically.</p><h2 id=usage>Usage&nbsp;<a class=headline-hash href=#usage>¶</a></h2><p>The following example demonstrates a simple module that adds two integers:</p><pre><code>import pycde
+
+from circt.dialects import comb
+
+
+@pycde.module
+class AddInts:
+    a = pycde.Input(pycde.types.i32)
+    b = pycde.Input(pycde.types.i32)
+    c = pycde.Output(pycde.types.i32)
+
+    @pycde.generator
+    def construct(mod):
+        mod.c = comb.AddOp.create(mod.a, mod.b)
+
+
+system = pycde.System([AddInts])
+system.print()
+system.generate()
+system.print()
+system.print_verilog()
+</code></pre><p>Modules are decorated with <code>@pycde.module</code>, and define their ports using <code>pycde.Input</code> and <code>pycde.Output</code>. To control how the body of the module is generated, decorate a method with <code>@pycde.generator</code>. The generator is passed an object of the module, and ports can be accessed through named attributes.</p><p>In order to work with modules, you must add them into a <code>pycde.System</code>. This is constructed by passing a list of modules. Calling the <code>generate</code> method will run the module(s) generators. Calling the <code>print_verilog</code> method will export the system to System Verilog.</p><p>The above example will print out three times:</p><ol><li>The <code>AddInts</code> module with an empty body</li><li>The <code>AddInts</code> module after its body has been generated</li><li>The <code>AddInts</code> module represented in System Verilog</li></ol><div class=edit-meta><br></div><nav class=pagination><a class="nav nav-prev" href=/docs/Passes/ title=Passes><i class="fas fa-arrow-left" aria-hidden=true></i>Prev - Passes</a>
+<a class="nav nav-next" href=/docs/RationaleSeq/ title="Seq(uential) Dialect Rationale">Next - Seq(uential) Dialect Rationale <i class="fas fa-arrow-right" aria-hidden=true></i></a></nav><footer><p class=powered>Powered by <a href=https://gohugo.io>Hugo</a>. Theme by <a href=https://themes.gohugo.io/hugo-theme-techdoc/>TechDoc</a>. Designed by <a href=https://github.com/thingsym/hugo-theme-techdoc>Thingsym</a>.</p></footer></main><div class=sidebar><nav class=slide-menu><ul><li><a href=https://circt.llvm.org/>Home</a></li><li><a href=/talks/>Talks and Related Publications</a></li><li><a href=/getting_started/>Getting Started</a></li><li class="parent has-sub-menu"><a href=/docs/>Code Documentation<span class="mark opened">-</span></a><ul class=sub-menu><li class=has-sub-menu><a href=/docs/CommandGuide/>CommandGuide<span class="mark closed">+</span></a><ul class=sub-menu><li><a href=/docs/CommandGuide/handshake-runner/>handshake-runner</a></li></ul></li><li class=has-sub-menu><a href=/docs/Dialects/>Dialects<span class="mark closed">+</span></a><ul class=sub-menu><li><a href=/docs/Dialects/FIRRTLAttributes/></a></li><li><a href=/docs/Dialects/Calyx/>'calyx' Dialect</a></li><li><a href=/docs/Dialects/Comb/>'comb' Dialect</a></li><li><a href=/docs/Dialects/ESI/>'esi' Dialect</a></li><li><a href=/docs/Dialects/FIRRTL/>'firrtl' Dialect</a></li><li><a href=/docs/Dialects/FSM/>'fsm' Dialect</a></li><li><a href=/docs/Dialects/Handshake/>'handshake' Dialect</a></li><li><a href=/docs/Dialects/HW/>'hw' Dialect</a></li><li><a href=/docs/Dialects/SV/>'hw' Dialect</a></li><li><a href=/docs/Dialects/LLHD/>'llhd' Dialect</a></li><li><a href=/docs/Dialects/Moore/>'moore' Dialect</a></li><li><a href=/docs/Dialects/MSFT/>'msft' Dialect</a></li><li><a href=/docs/Dialects/Seq/>'seq' Dialect</a></li><li><a href=/docs/Dialects/StaticLogic/>'staticlogic' Dialect</a></li></ul></li><li class=has-sub-menu><a href=/docs/ESI/>ESI<span class="mark closed">+</span></a><ul class=sub-menu><li><a href=/docs/ESI/cosim/>ESI cosimulation model</a></li><li><a href=/docs/ESI/types/>ESI data types and communication types</a></li><li><a href=/docs/ESI/services/>ESI Global Services</a></li><li><a href=/docs/ESI/software_api/>ESI Software APIs</a></li><li><a href=/docs/ESI/notes/>Miscellaneous Notes</a></li></ul></li><li><a href=/docs/CalyxPasses/></a></li><li><a href=/docs/HandshakePasses/></a></li><li><a href=/docs/RationaleComb/>`comb` Dialect Rationale</a></li><li><a href=/docs/Charter/>CIRCT Charter</a></li><li><a href=/docs/FIRRTLAnnotations/>FIRRTL Annotations</a></li><li><a href=/docs/RationaleFIRRTL/>FIRRTL Dialect Rationale</a></li><li><a href=/docs/RationaleFSM/>FSM Dialect Rationale</a></li><li><a href=/docs/GettingStarted/>Getting Started with the CIRCT Project</a></li><li><a href=/docs/RationaleHW/>HW Dialect Rationale</a></li><li><a href=/docs/Passes/>Passes</a></li><li class=active><a href=/docs/PyCDE/>PyCDE</a></li><li><a href=/docs/RationaleSeq/>Seq(uential) Dialect Rationale</a></li><li><a href=/docs/RationaleSV/>SV Dialect Rationale</a></li><li><a href=/docs/RationaleESI/>The Elastic Silicon Interconnect dialect</a></li><li><a href=/docs/PythonBindings/>Using the Python Bindings</a></li><li><a href=/docs/VerilogGeneration/>Verilog and SystemVerilog Generation</a></li></ul></li></ul></nav><div class=sidebar-footer></div></div></div><a href=# id=backtothetop-fixed class=backtothetop data-backtothetop-duration=600 data-backtothetop-easing=easeOutQuart data-backtothetop-fixed-fadein=1000 data-backtothetop-fixed-fadeout=1000 data-backtothetop-fixed-bottom=10 data-backtothetop-fixed-right=20><span class="fa-layers fa-fw"><i class="fas fa-circle"></i><i class="fas fa-arrow-circle-up"></i></span></a></div></body></html>

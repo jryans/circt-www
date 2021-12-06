@@ -1,0 +1,16 @@
+<map id="include/circt/Dialect/Handshake/HandshakeDialect.h" name="include/circt/Dialect/Handshake/HandshakeDialect.h">
+<area shape="rect" id="node1" title=" " alt="" coords="648,5,880,47"/>
+<area shape="rect" id="node2" href="$HandshakeOps_8h.html" title=" " alt="" coords="659,95,869,136"/>
+<area shape="rect" id="node6" href="$HandshakeDialect_8cpp.html" title=" " alt="" coords="5,184,176,225"/>
+<area shape="rect" id="node14" href="$InitAllDialects_8h.html" title=" " alt="" coords="893,102,1101,129"/>
+<area shape="rect" id="node3" href="$Visitor_8h.html" title=" " alt="" coords="1051,184,1205,225"/>
+<area shape="rect" id="node4" href="$HandshakeToFIRRTL_8cpp.html" title=" " alt="" coords="1247,273,1489,315"/>
+<area shape="rect" id="node5" href="$StandardToHandshake_8cpp.html" title=" " alt="" coords="1280,184,1549,225"/>
+<area shape="rect" id="node7" href="$HandshakeExecutableOps_8cpp.html" title=" " alt="" coords="200,184,421,225"/>
+<area shape="rect" id="node8" href="$HandshakeOps_8cpp.html" title=" " alt="" coords="446,184,610,225"/>
+<area shape="rect" id="node9" href="$Handshake_2Transforms_2PassDetails_8h.html" title=" " alt="" coords="736,184,925,225"/>
+<area shape="rect" id="node10" href="$Analysis_8cpp.html" title=" " alt="" coords="356,273,540,315"/>
+<area shape="rect" id="node11" href="$Buffers_8cpp.html" title=" " alt="" coords="565,273,739,315"/>
+<area shape="rect" id="node12" href="$Materialization_8cpp.html" title=" " alt="" coords="764,273,991,315"/>
+<area shape="rect" id="node13" href="$PassHelpers_8cpp.html" title=" " alt="" coords="1015,273,1223,315"/>
+</map>

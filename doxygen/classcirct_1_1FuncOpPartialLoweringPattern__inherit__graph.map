@@ -1,0 +1,16 @@
+<map id="circt::FuncOpPartialLoweringPattern" name="circt::FuncOpPartialLoweringPattern">
+<area shape="rect" id="node1" title="FuncOpPartialLoweringPatterns are patterns which intend to match on FuncOps and then perform their ow..." alt="" coords="879,201,1085,242"/>
+<area shape="rect" id="node6" href="$classcirct_1_1BuildBBRegs.html" title="Builds registers for each block argument in the program." alt="" coords="1163,5,1305,32"/>
+<area shape="rect" id="node7" href="$classcirct_1_1BuildControl.html" title="Builds a control schedule by traversing the CFG of the function and associating this with the previou..." alt="" coords="1165,56,1303,83"/>
+<area shape="rect" id="node8" href="$classcirct_1_1BuildOpGroups.html" title="Iterate through the operations of a source function and instantiate components or primitives based on..." alt="" coords="1157,107,1311,133"/>
+<area shape="rect" id="node9" href="$classcirct_1_1BuildReturnRegs.html" title="Builds registers for the return statement of the program and constant assignments to the component re..." alt="" coords="1151,157,1317,184"/>
+<area shape="rect" id="node10" href="$classcirct_1_1BuildWhileGroups.html" title="In BuildWhileGroups, a register is created for each iteration argumenet of the while op." alt="" coords="1147,208,1321,235"/>
+<area shape="rect" id="node11" href="$classcirct_1_1CleanupFuncOps.html" title="Erases FuncOp operations." alt="" coords="1151,259,1317,285"/>
+<area shape="rect" id="node12" href="$classcirct_1_1ConvertIndexTypes.html" title="Connverts all index&#45;typed operations and values to i32 values." alt="" coords="1143,309,1325,336"/>
+<area shape="rect" id="node13" href="$structcirct_1_1FuncOpConversion.html" title="Creates a new Calyx component for each FuncOp in the program." alt="" coords="1145,360,1323,387"/>
+<area shape="rect" id="node14" href="$classcirct_1_1LateSSAReplacement.html" title="LateSSAReplacement contains various functions for replacing SSA values that were not replaced during ..." alt="" coords="1135,411,1333,437"/>
+<area shape="rect" id="node2" href="$classcirct_1_1PartialLoweringPattern.html" title=" " alt="" coords="625,201,829,242"/>
+<area shape="rect" id="node3" href="$structmlir_1_1OpRewritePattern.html" title=" " alt="" coords="257,169,428,210"/>
+<area shape="rect" id="node4" href="$classcirct_1_1PartialLoweringPattern.html" title="Base class for partial lowering passes." alt="" coords="225,234,460,275"/>
+<area shape="rect" id="node5" href="$structmlir_1_1OpRewritePattern.html" title=" " alt="" coords="5,234,176,275"/>
+</map>

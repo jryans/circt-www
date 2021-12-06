@@ -1,0 +1,5 @@
+<map id="circt::NonTerminatingGroupDonePattern" name="circt::NonTerminatingGroupDonePattern">
+<area shape="rect" id="node1" title="GroupDoneOp&#39;s are terminator operations and should therefore be the last operator in a group." alt="" coords="5,200,205,241"/>
+<area shape="rect" id="node2" href="$structmlir_1_1OpRewritePattern.html" title=" " alt="" coords="12,109,199,151"/>
+<area shape="rect" id="node3" href="$structmlir_1_1OpRewritePattern.html" title=" " alt="" coords="20,5,191,47"/>
+</map>

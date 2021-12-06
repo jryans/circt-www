@@ -1,0 +1,10 @@
+<map id="circt::msft::PlacementDB" name="circt::msft::PlacementDB">
+<area shape="rect" id="node1" title="A data structure to contain both the locations of the primitives on the device and instance assignmen..." alt="" coords="713,122,896,149"/>
+<area shape="rect" id="node2" title=" " alt="" coords="331,5,526,47"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,13,105,39"/>
+<area shape="rect" id="node4" title=" " alt="" coords="403,71,454,98"/>
+<area shape="rect" id="node5" title=" " alt="" coords="376,122,481,149"/>
+<area shape="rect" id="node6" title=" " alt="" coords="313,173,544,199"/>
+<area shape="rect" id="node7" title=" " alt="" coords="10,173,101,199"/>
+<area shape="rect" id="node8" title=" " alt="" coords="385,223,472,250"/>
+</map>
